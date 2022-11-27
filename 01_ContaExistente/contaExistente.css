@@ -1,0 +1,70 @@
+/* ====================GLOBAL==================== */
+:root{
+    --whiteColor: #fcfcfc;
+    --whiteColor2: #F4F3EE;
+    --blueColor: #63A088;
+    --blackColor: #191716;
+}
+/* ====================BODY-BACKGROUND==================== */
+
+#corpoBody{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--blueColor);
+    background-blend-mode: multiply, normal;
+}
+/* ====================BLACK-BOX==================== */
+#blackBox{
+    background-color: var(--blackColor);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 500px;
+    transform: translate(-50%,-50%);
+    border-radius: 3rem;
+}
+
+#firstTitle{
+    margin-top: 3rem;
+    color: var(--whiteColor);
+}
+
+.input{
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: var(--whiteColor2);    
+}
+
+input::placeholder{
+    font-weight: bold;
+    color: var(--blackColor);
+}
+
+#submitContaExistente, #contaExistente{
+    color: var(--blackColor);
+    font-weight: bold;
+    margin-top: 1.5rem;
+    background-color: var(--whiteColor2);
+    height: 3rem;
+    width: 35%;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#submitContaExistente:hover, #contaExistente:hover{
+    color: var(--blackColor);
+    background-color: #DCDCDC;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+#mostrarSenha{
+    width: 40px;
+    background-color: var(--whiteColor2);
+    margin-right: -40px;
+}
