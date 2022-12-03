@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--==========LINKS-JS-CSS==========-->
 <link href="cadastrarConta.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../Imagens/icone.jpeg">
 <script src="cadastrarConta.js"></script>  
 
 <!--==========PAGE-START==========-->

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--==========LINKS-JS-CSS==========-->
 <link href="contaExistente.css" rel="stylesheet" type="text/css" />
+<link rel="icon" href="../Imagens/icone.jpeg">
 <script src="contaExistente.js"> </script>  
 
 <!--==========PAGE-START==========-->

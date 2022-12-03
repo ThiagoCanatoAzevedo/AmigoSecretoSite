@@ -11,8 +11,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=2000), 
-    linear-gradient(100deg, #6F8F72, #77AD78);
+    background-color: #638d66;     
     background-blend-mode: multiply, normal;
     height: 100vh;
     overflow: hidden;
@@ -23,39 +22,6 @@ body{
     color: var(--white-one);
 
     margin-top: 4em;
-}
-
-#titleTwo{
-    font-family: 'Titillium Web', sans-serif;
-    color: var(--white-one);
-
-    margin-top: 2em;
-
-}
-
-#titleThree{
-    font-family: 'Titillium Web', sans-serif;
-    color: var(--white-one);
-
-    margin-top: 3em;
-
-}
-
-#timer{
-    font-family: 'Titillium Web', sans-serif;
-    color: var(--white-one);
-}
-
-
-.c-loader{
-    animation: is-rotating 1s infinite;
-    border: 6px solid #e5e5e5;
-    border-radius: 50%;
-    border-top-color:#002500;
-    height: 5em;
-    width: 5em;
-
-    margin-top: 6em;
 }
 
 #enviaEmails{
@@ -82,18 +48,12 @@ body{
     transition: background 200ms; 
     /* margin-top:  */
     margin-right: 1em;
-    margin-bottom: 3em;
+    /* margin-bottom: 3em; */
 }
 
 #enviaEmails:hover{
-    background-color: #4A7C59 ;
+    background-color: #385f44 ;
 }
-
-@keyframes is-rotating {
-    to {
-      transform: rotate(1turn);
-    }
-  }
 
 #mensagemAmigoSecreto{
     border: solid 1px #2D2D2A;

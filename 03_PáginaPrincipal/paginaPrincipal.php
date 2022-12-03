@@ -59,9 +59,10 @@ $usuarioTabela = $sql_exec9->fetch_assoc();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DoctorCare</title>
+    <title>AmigoSecreto</title>
 
     <link rel="stylesheet" href="./paginaPrincipal.css" />
+    <link rel="icon" href="../Imagens/icone.jpeg">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="paginaPrincipal.js"></script>
 
@@ -554,10 +555,11 @@ $usuarioTabela = $sql_exec9->fetch_assoc();
           </header>
           
           <div class="content">
-          <?php
-              echo "<p> O sorteio será para o grupo: ". $grupoAtual ."</p>";
-          ?><br>
-            <a class="button" id="horaJogo">Hora do jogo!</a>
+          
+          <?php echo "<p> O sorteio será para o grupo: ". $grupoAtual ."</p>";?>
+          
+          <br>
+            <a href='../04_PáginaFim/paginaFim.php' class="button" id="horaJogo">Hora do jogo!</a>
 
           </div>
         </div>
@@ -690,7 +692,7 @@ $usuarioTabela = $sql_exec9->fetch_assoc();
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="20" cy="20" r="20" fill="#00856F" />
+        <circle cx="20" cy="20" r="20" fill="#5E101A" />
         <path
           d="M20 27V13"
           stroke="white"

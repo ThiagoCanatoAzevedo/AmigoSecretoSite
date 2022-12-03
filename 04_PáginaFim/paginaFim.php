@@ -53,17 +53,17 @@ if(isset($_POST['send'])){
         array_push($arrayTodasFamilias, $usuario['familia']);
         array_push($arrayTodosEmails, $usuario['email']);
         array_push($arrayTodosPresentes, $usuario['presente']);
+
     
         $randomizacao = rand(0, $numeroRowsParticipantes-1);
 
         $arrayFamiliasCont = $arrayTodasFamilias[$cont];
         $arrayFamiliasRandomizacao = $arrayTodasFamilias[$randomizacao];
-        
+
         $cont2 = 0;
-        while($cont2 < 3 and (in_array($randomizacao, $numerosSorteados, true) or $arrayFamiliasCont == $arrayFamiliasRandomizacao)){
+        while($cont2 < 3 and (in_array($randomizacao, $numerosSorteados) or $arrayFamiliasCont == $arrayFamiliasRandomizacao)){
             $randomizacao = rand(0, $numeroRowsParticipantes-1);
             $cont2+=1;
-            // continue;
         }
     
         if($cont2 == 3){
@@ -89,6 +89,9 @@ if(isset($_POST['send'])){
         $todosNomes = $arrayTodosNomes[$todosValores];
         $todosPresentes = $arrayTodosPresentes[$todosValores];
 
+        $quemSorteouSorteados = mysqli_query($conexao, "INSERT INTO grupopessoasorteio (idpessoagrupo_amigo, idpessoagrupo_sorteado)  
+        VALUES ('$arrayTodosNomes[$cont3]', '$todosNomes')");
+        
         $mail = new PHPMailer(true);
     
         $mail->isSMTP();
@@ -108,10 +111,10 @@ if(isset($_POST['send'])){
         $mail->isHTML(true);
     
         $mail->Username = 'amigosecretojogos@gmail.com';
-        $mail->Password = 'qdbvajvhexbcqaib';
-        $mail->Subject = "Amigo secreto do grupo".  $grupoAtual;
+        $mail->Password = 'biqyfvicntgdiniv';
+        $mail->Subject = "Amigo secreto do grupo "  .  $grupoAtual ;
         $mail->MsgHTML("<div style='border: solid 1px #2D2D2A;'id='mensagemAmigoSecreto'>
-        <p style='font-size: 18px; color: #3C3C3C; margin-left: 10px;' class='informacoesMensagemAmigoSecreto'> Olá! Obrigado por utilizar o nosso programa para o seu amigo secreto, feito totalmente pelos 2 desenvolvedores, Thiago e Carol. Esperamos ter ajudado você e todo o seu grupo a fazer um jogo mais legal e funcional!</p>
+        <p style='font-size: 18px; color: #3C3C3C; margin-left: 10px;' class='informacoesMensagemAmigoSecreto'> Olá! Obrigado por utilizar o nosso programa para o seu amigo secreto. Esperamos ter ajudado você e todo o seu grupo a fazer um jogo mais legal e funcional!</p>
         <br> 
         <h2 style='font-size: 20px; color: #353831; margin-left: 10px;' class='tirouPresenteMensagemAmigoSecreto' >Você infelizmente (ou felizmente) tirou: " . $todosNomes  ."</h2>
         <br>
@@ -126,11 +129,10 @@ if(isset($_POST['send'])){
 
         $cont3+=1;
     }
-    echo "<center><h1 id='titleTwo`>
-    Peça para os participantes olharem os emails deles.
-</h1></center>";
+
 
 }
+
 
 ?> 
 
@@ -138,25 +140,22 @@ if(isset($_POST['send'])){
 <html>
 <head>
 <meta charset="UTF-8"/>
-<title>Document</title>
+<title>AmigoSecreto</title>
 </head>
 <body id = "fullBody">  
+<!-- <link rel="icon" href="../Imagens/icone.jpeg"> -->
     <link href="paginaFim.css" rel="stylesheet" type="text/css" /> 
     <script type="text/javascript" src="paginaFim.js"> </script>
 
     <center><h1 id="titleOne">
         O sorteio será realizado após apertar esse botão!
     </h1>
-    <form method="post" action='paginaFim.php'>
+    <form method="post" action=''>
         <button type='submit' name='send' id='enviaEmails'>Enviar</button>
     </form>
+    <h1 id='titleOne'> Peça para os participantes olharem os emails deles após a página terminar de carregar.</h1>
 </center>
 
-    
-
-    <!-- <center><div class="c-loader"></div></center>
-
-    <center><h2 id="titleThree">Após 10 segundo, você poderá fechar esta página: <h2 id=""></h2><h2 id='timer'></h2></center> -->
 
 </body>
 </html>
