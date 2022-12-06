@@ -111,7 +111,7 @@ if(isset($_POST['send'])){
         $mail->isHTML(true);
     
         $mail->Username = 'amigosecretojogos@gmail.com';
-        $mail->Password = 'biqyfvicntgdiniv';
+        $mail->Password = '';
         $mail->Subject = "Amigo secreto do grupo "  .  $grupoAtual ;
         $mail->MsgHTML("<div style='border: solid 1px #2D2D2A;'id='mensagemAmigoSecreto'>
         <p style='font-size: 18px; color: #3C3C3C; margin-left: 10px;' class='informacoesMensagemAmigoSecreto'> Olá! Obrigado por utilizar o nosso programa para o seu amigo secreto. Esperamos ter ajudado você e todo o seu grupo a fazer um jogo mais legal e funcional!</p>
